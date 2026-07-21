@@ -1,0 +1,57 @@
+{
+  "name": "flareintel",
+  "version": "0.1.0",
+  "description": "On-Chain Geopolitical & Financial Intelligence on Flare — FTSOv2 CII Oracle, FDC Bridge, RDT Token, Risk Dashboard",
+  "main": "src/api/server.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:gas": "REPORT_GAS=true hardhat test",
+    "deploy:coston2": "hardhat run scripts/deploy.js --network coston2",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "start:api": "node src/api/server.js",
+    "start:pipeline": "node src/pipeline/ftso-submitter.js",
+    "start:fdc": "node src/pipeline/fdc-bridge.js",
+    "node": "hardhat node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/flareintel.git"
+  },
+  "keywords": [
+    "flare",
+    "ftso",
+    "ftsov2",
+    "fdc",
+    "oracle",
+    "geopolitical-risk",
+    "cii",
+    "defi",
+    "blockchain",
+    "hackathon"
+  ],
+  "author": "FlareIntel Team",
+  "license": "AGPL-3.0-only",
+  "dependencies": {
+    "ethers": "^6.13.0",
+    "express": "^4.21.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "axios": "^1.7.0",
+    "winston": "^3.15.0",
+    "bignumber.js": "^9.1.2",
+    "body-parser": "^1.20.3",
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "hardhat": "^2.22.0",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.1.0",
+    "@openzeppelin/contracts-upgradeable": "^5.1.0",
+    "chai": "^4.5.0",
+    "mocha": "^10.7.0",
+    "chai-as-promised": "^8.0.1",
+    "sinon": "^18.0.1"
+  }
+}
